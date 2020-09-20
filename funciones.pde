@@ -6,10 +6,18 @@ void boton(float x, float y, float ancho, float alto, float corner) { //Crear bo
   popStyle();
 }
 
-void textoBoton(String texto, float x, float y) { 
+void textoBoton(String texto, float x, float y,float tamFuente) { //Agregar texto boton
   pushStyle();  
-  textSize(15); //Tamaño texto
+  textSize(tamFuente); //Tamaño texto
   fill(0); //Color texto
   text(texto, x, y); //Texto boton
   popStyle();
+}
+
+Boolean clickBoton(float x, float y) { //Verificar click boton
+  if (mouseX>x-altoBoton && mouseX<x+altoBoton && mouseY>y-altoBoton/2 && mouseY<y+altoBoton/2) {
+    return true;
+  } else {
+    return false;
+  }
 }

@@ -4,12 +4,12 @@ void mostrarPantalla05() {
   image(img05, 0, 0);
 
   //Boton "Entrenar con Krilin"
-  boton(height/3, height*0.83, anchoBoton, altoBoton, corner);
-  textoBoton(boton[7], height/3, height*0.83);
+  boton(width/4, height*0.83, anchoBoton, altoBoton, corner);
+  textoBoton(boton[7], width/4, height*0.83, tamFuente);
 
   //Boton "Hablar con mis amigos"
-  boton(height, height*0.84, anchoBoton, altoBoton, corner);
-  textoBoton(boton[8], height, height*0.84);
+  boton(width*0.75, height*0.84, anchoBoton, altoBoton, corner);
+  textoBoton(boton[8], width*0.75, height*0.84, tamFuente);
 
   //Texto historia
   pushStyle();
@@ -18,18 +18,19 @@ void mostrarPantalla05() {
   rect(200, 66, 350, 90, 10);
   fill(254, 255, 0, 120);
   textSize(25);
-  text("LLegan a la casa de Roshi y se \nencontraban con él sus amigos \nBulma y Krilin.", 200, 50);
+  text(texto[4], 200, 50);
   popStyle();
 }
 
 
 void clickPantalla05() {
-  if ( mouseX>200-50 && mouseX<200+50 && mouseY>500-25 && mouseY<500+25 ) {
-    //Click en boton PANTALLA 7
+  if ( clickBoton(width/4, height*0.83)) {
+    //Click en boton "Entrenar con Krilin"
     estado = 7;
-  }
-  if ( mouseX>600-50 && mouseX<600+50 && mouseY>500-25 && mouseY<500+25 ) {
-    //Click en boton PANTALLA 6
-    estado = 6;
+  } else {
+    if ( clickBoton(width*0.75, height*0.84)) {
+      //Click en boton "Hablar con mis amigos"
+      estado = 6;
+    }
   }
 }

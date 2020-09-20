@@ -1,13 +1,29 @@
 float estado;
 PImage img00, img01, img02, img03, img04, img05, img06, img07, img08, img09, img10, img11, img12;
-PFont texto; 
+PFont fuente; 
 float corner, altoBoton, anchoBoton;
+float tamFuente;
 String[] boton;
-
+String[] texto;
 
 void setup() {
   size(800, 600);
   surface.setResizable(true);
+
+  //Texto creditos e historia
+  texto=new String[12];
+  texto[0]="Tecnologia Multimedia\nAlumno:       Lopez,Marilin\nProfesor:    José Luis Bugiolachi\nAño:             2020";
+  texto[1]="Goku y su hijo Gohan disfrutaban\n de un hermoso día en el bosque";
+  texto[2]="Luego de juntar algunas manzanas, se dirigen a visitar al maestro de Goku, Roshi.";
+  texto[3]="Deciden ir al lago a pescar...\n Luego de pescar un rato, se sientan \na cocinar en la fogata.";
+  texto[4]="LLegan a la casa de Roshi y se \nencontraban con él sus amigos \nBulma y Krilin.";
+  texto[5]="Mientras Goku disfrutaba de estar con sus \namigos, de repente observan un objeto\nextraño en el cielo que se dirigia a la tierra.";
+  texto[6]="Despues de un rato de entrenamiento vuelven con los demás.";
+  texto[7]="Unos minutos después, se presenta ante todos un hombre\n que dice ser 'Raditz', el hermano de Goku, y lo invita\n a que lo acompañe a conquistar el planeta tierra.";
+  texto[8]="Goku se niega a su propuesta...\n Entonces Raditz le dice que se\nva a llevar a Gohan con él.";
+  texto[9]="Goku llama a Piccoro usando su tecnica \ntelepatica y él viene en su ayuda.";
+  texto[10]="Luego del enfrentamiendo...\n Goku es derrotado y Raditz\n se lleva con él a Gohan.";
+  texto[11]="Ambos logran derrotarlo...\nOtra vez Goku y sus amigos\n han salvado el planeta!.";
 
   //Texto en botones
   boton=new String[15];
@@ -27,8 +43,8 @@ void setup() {
   boton[13]="Pedir ayuda \na Pikoro";
   boton[14]="Comenzar a\n pelear!";
 
-  texto = createFont("dragonball.ttf", 32);
-  textFont(texto, 15);
+  fuente = createFont("dragonball.ttf", 32);
+  textFont(fuente, 15);
   rectMode(CENTER);
   textAlign(CENTER);
   img00=loadImage("00.jpg");
@@ -48,9 +64,12 @@ void setup() {
 
 void draw() {
   //Propiedades botones
-  anchoBoton=height/6;
+  anchoBoton=width/8;
   altoBoton=height/12;
   corner=10;
+  
+  //Tamaño fuente
+  tamFuente=height*0.025;
 
   if (estado==0) {
     //pantalla 0

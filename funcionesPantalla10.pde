@@ -4,8 +4,8 @@ void mostrarPantalla10() {
   image(img10, 0, 0);
 
   //Boton "Comenzar a pelear!"
-  boton(height,height*0.83, anchoBoton, altoBoton, corner);
-  textoBoton(boton[14], height, height*0.83);
+  boton(width*0.75, height*0.83, anchoBoton, altoBoton, corner);
+  textoBoton(boton[14], width*0.75, height*0.83, tamFuente);
 
   //Texto historia
   pushStyle();
@@ -14,13 +14,13 @@ void mostrarPantalla10() {
   rect(295, 58, 400, 65, 10);
   fill(254, 255, 0, 120);
   textSize(25);
-  text("Goku llama a Piccoro usando su tecnica \ntelepatica y él viene en su ayuda.", 300, 50);
+  text(texto[9], 300, 50);
   popStyle();
 }
 
 
 void clickPantalla10() {
-  if ( mouseX>600-50 && mouseX<600+50 && mouseY>500-25 && mouseY<500+25 ) {
+  if (clickBoton(width*0.75, height*0.83)) {
     //Click en boton PANTALLA 12
     estado = 12;
   }
