@@ -1,30 +1,13 @@
-PImage fondo;
-int cm = 10;  //Cantidad manzanas
-Manzana[] m = new Manzana[cm];
-Personaje p;
+Juego juego; 
 
 void setup() {
   size(800, 600);
-  fondo=loadImage("fondo.png");
-
-  //Instancias de Manzana
-  for ( int i = 0; i < m.length; i++ ) {
-    m[i] = new Manzana( );
-  }
-  p=new Personaje();
+  juego=new Juego();
 }
+
 void draw() {
-  image(fondo, 0, 0);
-  for ( int i = 0; i < m.length; i++ ) {
-    m[i].dibujar();
-    m[i].actualizar();
+  juego.dibujar();
+  if (keyPressed) { //Tecla presionada
+    juego.teclado(keyCode);
   }
-  p.dibujar();
-}
-
-void keyPressed() {
-  p.mover();
-}
-
-void mousePressed() {
 }

@@ -1,6 +1,6 @@
 class Personaje {
-  float x, y;
-  float t;
+  float x, y; //Posicion de personaje
+  float t; //Tamaño de personaje
   PImage img;
 
   //Constructor
@@ -13,14 +13,15 @@ class Personaje {
   }
 
   //Funcionalidades
+
   void dibujar() {
     image(img, x, y);
   }
 
-  void mover() {
-    if (keyCode==LEFT) {  
+  void mover(int tecla) { //Verifica si apretó tecla de izquierda o derecha
+    if (tecla==LEFT) {  
       x-=5; //Mover a la izquierda
-    } else if (keyCode==RIGHT) { 
+    } else if (tecla==RIGHT) { 
       x+=5; //Mover a la derecha
     }
   }

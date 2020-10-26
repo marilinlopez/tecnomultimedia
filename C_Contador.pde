@@ -1,18 +1,35 @@
-
-int puntaje; 
-
 class Contador {
+
+  //Atributos
+  int puntaje, perdidas; 
+  PFont fuente;
 
   //Constructor
   Contador() {
-    puntaje = 0;
+    perdidas = 0; //Inicializa perdidas en 0
+    puntaje = 0; //Inicializa puntaje en 0
+    fuente = createFont("dragonball.ttf", 25);
+    textFont(fuente, 25);
   }
 
   //Funcionalidades
-  void mostrarPuntaje() {
-    textSize(20);
-    fill(255, 0, 250);
-    text("Juntó "+ puntaje+ " manzanas.", width-100, 50);
+  void actualizarPerdidas() { //Suma 1 a perdidas
+    perdidas++;
   }
 
+  void actualizarPuntaje() { //Suma 1 a puntaje
+    puntaje++;
+  }
+
+  void imprimirPuntaje() { //Imprimir puntaje
+    fill(254, 255, 0, 120);
+    textSize(25);
+    text("Juntaste "+ puntaje+ " manzanas.", 50, 50);
+  }
+  
+  void imprimirPerdidas() { //Imprimir manzanas perdidas
+    fill(254, 255, 0, 120);
+    textSize(25);
+    text("Perdiste "+ perdidas+ " manzanas.", 500, 50);
+  }
 }
