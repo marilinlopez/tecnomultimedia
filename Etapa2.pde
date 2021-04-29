@@ -1,3 +1,4 @@
+
 Caminante c;
 
 void setup() {
@@ -7,5 +8,5 @@ void setup() {
 
 void draw() {
   c.dibujar();
-  c.mover();
+  c.actualizar();
 }
