@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Trabajo práctico 1</title>
+
+  <!--Import Google Font-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;900&display=swap" rel="stylesheet">
+
+  <!--Import .css-->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Materialize css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!--Let browser know website is optimized for mobile-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <!--Header-->
+
+  <div class="container01">
+    <div class="column01">
+      <img id="img01" src="img/img01.png">
+      <h1 class="titulo">Todo lo que necesitás para ese evento especial.</h1>
+      <h2 id="subtitulo">¡Contactate con nosotros para tener la
+        <naranja>fiesta de tus sueños</naranja> y obtene un <naranja>10% de descuento!</naranja>
+      </h2>
+      <a id="button" href="#formulario">Suscribirse</a>
+    </div>
+    <img id="img02" src="img/img02.jpg">
+  </div>
+
+  <!--Quienes somos-->
+
+  <div class="container02">
+    <img src="img/img03.jpg">
+    <div class="column02">
+      <h1 class="titulos">Quienes somos</h1>
+      <p class="parrafo">
+        <naranja>MEventos</naranja> es una empresa que se especializa en la ambientación personalizada de eventos, que
+        les asesorará desde el primer momento en la correcta selección de productos para el acontecimiento que tanto han
+        esperado.
+      </p>
+    </div>
+  </div>
+
+  <!--Texto central-->
+
+  <div class="container03">
+    <p class="texto-central">
+      <naranja>MEventos</naranja> irradia excelencia en todo lo sentidos, lo que se evidencia tanto en sus perfectos
+      espacios como en los servicios que brinda.
+    </p>
+  </div>
+
+  <!--Que ofrecemos-->
+
+  <div class="container04">
+    <div class="column04">
+      <h1 class="titulos">Que ofrecemos</h1>
+      <p class="parrafo">Los productos que encontrarán en <naranja>MEventos</naranja> se elaboran en un taller propio.
+        Allí
+        fabrican objetos, muebles y accesorios que hacen que sus ambientaciones tengan ese toque especial y único.</p>
+    </div>
+    <img src="img/img04.jpg">
+  </div>
+
+  <!--Servicios-->
+  <div class="container05">
+    <div class="col s12">
+      <h1 class="titulos">Servicios</h1>
+      <div class="carousel">
+        <a class="carousel-item" href="#one!">
+          <img src="img/img06.jpg">
+          <div class="carousel-img">
+            <h2 class="texser">Catering</h2>
+          </div>
+        </a>
+        <a class="carousel-item" href="#two!">
+          <img src="img/img07.jpg">
+          <h2 class="texser">Altares personalizados</h2>
+        </a>
+        <a class="carousel-item" href="#three!">
+          <img src="img/img08.jpg">
+          <h2 class="texser">Barra móvil</h2>
+        </a>
+        <a class="carousel-item" href="#four!">
+          <img src="img/img09.jpg">
+          <h2 class="texser">Puntos de decoración para fotos</h2>
+        </a>
+        <a class="carousel-item" href="#five!">
+          <img src="img/img10.jpg">
+          <h2 class="texser">Iluminación</h2>
+        </a>
+        <a class="carousel-item" href="#three!">
+          <img src="img/img11.jpg">
+          <h2 class="texser">Arreglos florales</h2>
+        </a>
+        <a class="carousel-item" href="#four!">
+          <img src="img/img12.jpg">
+          <h2 class="texser">Ramos de novia y bouttonieres</h2>
+        </a>
+        <a class="carousel-item" href="#five!">
+          <img src="img/img13.jpg">
+          <h2 class="texser">Centros de mesa</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Formulario-->
+
+  <div class="container06">
+    <img src="img/form.jpg">
+    <div>
+      <form id="formulario">
+        <h1 id="formtit">¡Contáctanos ahora!</h1>
+        <h2 id="formsub">Llená el formulario para comunicarte con nosotros y obtener un 10% de descuento en nuestro servicio.</h2>
+        <input type="text" name="nombre" id="nombre" autofocus placeholder="Nombre completo" required>
+        <input type="email" name="email" id="email" autofocus placeholder="Email" required>
+        <input type="tel" name="telefono" id="telefono" autofocus placeholder="Teléfono" required>
+        <button type="submit" id="btnsub">Suscribirme</button>
+      </form>
+    </div>
+  </div>
+
+  <!--Modal-->
+
+  <div id="modalBackground">
+    <div class="modal" id="modal">
+      <button id="closebtn">&times;</button>
+      <img id="tick" src="img/tick.png">
+      <h2 id="mensaje"> <span id="nombreIngresado" name="nombreIngresado"></span></h2>
+    </div>
+  </div>
+
+  <!--Footer-->
+
+  <footer id="footer">
+    <p>© 2021 Todos los derechos reservados </p>
+  </footer>
+
+  <!-- Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
